@@ -49,9 +49,9 @@
                 let parent = findComponentUpward(this, 'Submenu');
 
                 if (parent) {
-                    this.dispatch('Submenu', 'on-menu-item-select', this.name);
+                    this.dispatch('Submenu', 'on-menu-item-select', this);
                 } else {
-                    this.dispatch('Menu', 'on-menu-item-select', this.name);
+                    this.dispatch('Menu', 'on-menu-item-select', this);
                 }
             }
         },

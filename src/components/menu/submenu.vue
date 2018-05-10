@@ -129,9 +129,9 @@
             }
         },
         mounted () {
-            this.$on('on-menu-item-select', (name) => {
+            this.$on('on-menu-item-select', (item) => {
                 if (this.mode === 'horizontal') this.opened = false;
-                this.dispatch('Menu', 'on-menu-item-select', name);
+                this.dispatch('Menu', 'on-menu-item-select', item);
                 return true;
             });
             this.$on('on-update-active-name', (status) => {

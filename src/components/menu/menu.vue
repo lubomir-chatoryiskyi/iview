@@ -112,9 +112,9 @@
             this.updateActiveName();
             this.openedNames = [...this.openNames];
             this.updateOpened();
-            this.$on('on-menu-item-select', (name) => {
-                this.currentActiveName = name;
-                this.$emit('on-select', name);
+            this.$on('on-menu-item-select', (item) => {
+                this.currentActiveName = item.name;
+                this.$emit('on-select', item);
             });
         },
         watch: {
